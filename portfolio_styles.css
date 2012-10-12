@@ -2,7 +2,7 @@
 
 body {
 	background-color: #748a9f;
-	font: 12px/18px helvetica, verdana, sans-serif;
+	font: 12px/18px Myriad, helvetica, verdana, sans-serif;
 	margin: 0px;
 	padding: 0px;
 }
@@ -16,6 +16,16 @@ body {
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
+}
+
+@font-face {
+	font-family: Myriad;
+	src: url(externals/MyriadPro-Regular.otf);
+}
+
+@font-face {
+	font-family: MyriadLight;
+	src: url(externals/MyriadPro-Light.otf);
 }
 
 header {
@@ -46,10 +56,10 @@ nav ul {
 
 nav ul li {
 	display: inline;
-	border: 2px solid #5878a9;
+	border: 1px solid #7babf7;
 	padding: 10px;
 	margin-right: 30px;
-	background-color: #2076c3;
+	background-color: #94c5ff;
 }
 
 /**************** side_menu *********************/
