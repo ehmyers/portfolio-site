@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+/******************** jello ***********************/
+
+.container {
+	width: 900px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+.inner_container {
+	width: 900px;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+/******************** menus ***********************/
+
+header {
+	position: absolute;
+	z-index: 15;
+	top: 5%;
+	width: 100%;
+	font: 35px "LittleDays";
+}
+
+#text_rotate {
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+}
+
+#another_text_rotate {
+	position: absolute;;
+	z-index: 10;
+	top: 40px
+	transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+}
+
+#last_text_rotate {
+	position: absolute;;
+	z-index: 10;
+	top: 15px
+	transform: rotate(-25deg);
+	-moz-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);
+}
+
+/******************** window **********************/
+.window_above {
+	width: 900px;
+	height: 90%;
+	position: absolute;
+	overflow: hidden;
+}
+
+/******************** content *********************/
+.content {
+	background: rgba(215, 215, 215, 0.5);
+	padding: 0px 30px 0px 30px;
+	margin: 0px;
+	position: absolute;
+	height: 91%;
+	width: 100%;
+	top: 15%;
+	z-index: 5;
+	overflow: auto;
+}
+
+#position_one {
+	position: absolute;
+	left: 50%;
+	right: 10%;
+	top: 20%;
+	bottom: 10%;
+}
+
+#position_two {
+	position: absolute;
+	left: 10%;
+	right: 50%;
+	top: 30%;
+	bottom: 10%;
+}
+
+#position_three {
+	position: absolute;
+	left: 15%;
+	right: 40%;
+	top: 40%;
+	bottom: 10%;
+}
+
+#position_four {
+	position: absolute;
+	left: 30%;
+	right: 30%;
+	top: 10%;
+	bottom: 10%;
+}
+
+/******************** general *********************/
+
+#active {
+	color: #be5c1b;
+}
+
+body {
+	background-color: #b4956c;
+	font: 12px/18px helvetica, verdana, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+div {
+	font: 15px "CenturyGothic";
+}
+
+@font-face {
+  font-family: LittleDays;
+  src: url(externals/Little days.ttf);
+}
+
+@font-face {
+	font-family: CenturyGothic;
+  src: url(externals/Century Gothic);
+}
+
+#footer {
+	position: absolute;
+	right: 7%;
+	bottom: 7%;
+	font: 40px LittleDays;
+	text-align: right;
+}
+
+h2 {
+	font: 25px "LittleDays";
+}
+
+h3 {
+	font: 20px "LittleDays";
+}
+
+img {
+	padding: 0px;
+	margin: 0px;
+}
+
+li {
+	list-style: none;
+	display: inline;
+	padding:0px 40px 0px 10px;
+}
+
+ul {
+	padding: 0px;
+	margin: 3% 0% -10px 0%;
+}
+
+/******************** links *********************/
+
+a:link {
+	text-decoration: none; 
+	color: #3a3322;
+	}
+	
+a:visited {
+	text-decoration: none; 
+	color: #52492d;
+	}
+
+a:hover {
+	text-decoration: none;
+	color: #3a3322;
+	}
+	
+a:active {
+	text-decoration: none; 
+	color: #3a3322;
+	}
+
+/******************* parallax *******************/
+
+#background {
+	opacity: .8;
+	background: url("../images/rotatable_bkds/surrealist_07.jpg");
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	position: fixed;
+	-webkit-transition: left 2500s linear 0;
+	-moz-transition: left 2500s linear 0;
+	-o-transition: left 2500s linear 0;
+	transition: left 2500s linear 0;
+}
+
+#midground {
+	background: url("../images/rotatable_bkds/surrealist_07.jpg");
+	opacity: 0.5;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	position: fixed;
+	-webkit-transition: left 2000s linear 0;
+	-moz-transition: left 2000s linear 0;
+	-o-transition: left 2000s linear 0;
+	transition: left 2000s linear 0;
+}
+
+#foreground {
+	opacity: 0.3;
+	background: url("../images/rotatable_bkds/surrealist_07.jpg");
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	position: fixed;
+	-webkit-transition: left 1000s linear 0;
+	-moz-transition: left 1000s linear 0;
+	-o-transition: left 1000s linear 0;
+	transition: left 1000s linear 0;
+}
+
+#experiment:target #background {
+  left: -5000px;
+}
+
+#experiment:hover #background {
+  left: -9999px;
+}
+
+#experiment:target #midground {
+	left: -5000px;
+}
+
+#experiment:hover #midground {
+	left: -9999px;
+}
+
+#experiment:hover #foreground {
+  left: -9999px;
+}
+
+#experiment:target #foreground {
+	left: -5000px;
+}

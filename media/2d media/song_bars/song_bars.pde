@@ -13,10 +13,11 @@ PFont beirutFont;
 Minim minim;
 AudioPlayer song;
 FFT fft;
+boolean isPlaying = false;
 
 void setup() { // what up, setup?
   //size(screen.width, screen.height);
-  size(400,400);
+  size(500,500);
   colorMode(HSB);
   //background stuffs
   nantes = loadImage("nantes.jpg");
@@ -29,14 +30,24 @@ void setup() { // what up, setup?
   // creates the song and minim stuff
   minim = new Minim(this);
   song = minim.loadFile("Nantes.wav",4096);
-  song.loop();
   // create an FFT object that has a time-domain buffer
   fft = new FFT(song.bufferSize(), song.sampleRate());
+}
+
+void mousePressed() {
+  isPlaying = !isPlaying;  
 }
 
 void draw() {
   changeBars();
   barsAndLines();
+  
+  if(isPlaying) {
+    song.play();
+  }
+  else {
+    song.pause(); 
+  }
 }
 
 void barsAndLines() {
