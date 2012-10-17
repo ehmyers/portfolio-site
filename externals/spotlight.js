@@ -18,7 +18,7 @@ $(document).ready(function() {
 	$("#launchpad img").click(function() {
 		var content = $(this).parent().attr("data-content");
 		var sidemenu = $("#" + content).attr("data-menu");
-		$("#" + sidemenu).fadeIn();
+		$("#" + sidemenu).fadeOut();
 		$("#" + sidemenu).addClass("active");
 		$("#launchpad").fadeOut();
 		$(".spotlight").fadeIn();
