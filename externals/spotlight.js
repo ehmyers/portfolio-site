@@ -11,8 +11,8 @@ $(document).ready(function() {
 		$(".spotlight").fadeIn();
 		
 		var active_menu = $(this).children("a").attr("data-menuid");
-		$(".active").removeClass("active");
-		$(active_menu).addClass("active");
+		$(".side_menu").hide();
+		$(active_menu).fadeIn();
 	});
 
 	$("#launchpad img").click(function() {
@@ -43,11 +43,3 @@ function spotlightShow(id) {
 	$(".spotlight").children().hide();
 	$("#" + id).fadeIn();
 }
-
-// window.onresize(function() {
-	// get window height
-	// get flash height
-	// get header height
-	// if window height is < flash height + header height,
-	// 		set flash height to window height - header height
-// });
