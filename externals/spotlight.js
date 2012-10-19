@@ -10,9 +10,12 @@ $(document).ready(function() {
 		$("#launchpad").fadeOut();
 		$(".spotlight").fadeIn();
 		
-		var active_menu = $(this).children("a").attr("data-menuid");
+		var active_menu = $(this).children("a").attr("data-menuid"); // swaps out menus
 		$(".side_menu").hide();
 		$(active_menu).fadeIn();
+
+		var first_item = $(active_menu + " ul").children(":first-child");
+		first_item.find("img").click();
 	});
 
 	$("#launchpad img").click(function() {
