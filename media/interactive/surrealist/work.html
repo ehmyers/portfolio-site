@@ -2,13 +2,16 @@
 <head>
 <title>surrealism - about</title>
 <link rel="stylesheet" href="externals/surrealist_styles.css" />
+<link rel="icon" type="image/ico" href="images/favicons/favicon01.ico" />
+<script type="text/javascript" src="externals/jquery.js"></script>
 <script type="text/javascript" src="externals/random.js"></script>
+<script type="text/javascript" src="mootools.svn.js"></script>
 </head>
 
 <body>
 <section class="container">
 <section class="inner_container">
-<section class="window_above">
+<section class="window">
 
 <section id="experiment">
 		<div id="background"></div>
@@ -18,37 +21,100 @@
 		<header>
 			<nav>
 				<ul>
-					<li><a href="surrealist.html">home</a></li>
+					<li><a href="index.html">home</a></li>
 					<li><a href="about.html">about</a></li>
 					<li><a href="artists.html">artists</a></li>
-					<li><a href="work.html" id="active">work</a></li>
+					<li><a href="work.html" class="active">work</a></li>
 					<li><a href="http://www.moma.org/" target="_blank" />moma</a></li>
 				</ul>
 			</nav>
 			<nav class="small_menu" id="last_text_rotate">
 				<ul>
-					<li><a href="#" id="active">paintings</a></li>
-					<li><a href="#">drawings</a></li>
-					<li><a href="#">video</a></li>
+					<li><a href="#" class="active" menu-item="paintings">paintings</a></li>
+					<li><a href="#" menu-item="drawings">drawings</a></li>
+					<li><a href="#" menu-item="video">video</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<section class="active content">
-			<article id="position_one">
-			
+			<article class="info_box" id="paintings">
+				<ul>
+					<li><a href='javascript:void(0)' onclick='showLightbox("manifesto_of_surrealism")'><img src="gallery/thumbs/manifesto_of_surrealism_breton.jpg" alt="manifesto_of_surrealism" /></a><span>Breton</span></li>
+
+					<li><a href='javascript:void(0)' onclick='showLightbox("nude_descending_staircase")'><img src="gallery/thumbs/nude_descending_staircase_2_duchamp.jpg" alt="nude_descending_staircase" /></a><span>Duchamp</span></li>
+
+					<li><a href='javascript:void(0)' onclick='showLightbox("treachery_of_images")'><img src="gallery/thumbs/treachery_of_images_magritte.jpg" alt="treachery_of_images" /></a><span>Magritte</span></li>
+
+					<!--<li><a href='javascript:void(0)' onclick='showLightbox("triumph_of_surrealism")'><img src="gallery/thumbs/triumph_of_surrealism_ernst.jpg" alt="triumph_of_surrealism" /></a><span>Ernst</span></li>!-->
+				</ul>
 			</article>
 
-			<article id="position_two">
-			<!--
-			!-->
+			<article class="info_box" id="drawings">
+				<ul>
+					<li><a href='javascript:void(0)' onclick='showLightbox("convulsive_beauty")'><img src="gallery/thumbs/convulsive_beauty_ray.gif" alt="convulsive_beauty" /></a><span>Ray</span></li>
+
+					<li><a href='javascript:void(0)' onclick='showLightbox("stalker")'><img src="gallery/thumbs/stalker_lukshina.jpg" alt="stalker" /></a><span>Lukshina</span></li>
+
+					<li><a href='javascript:void(0)' onclick='showLightbox("the_surrealist_piano")'><img src="gallery/thumbs/the_surrealist_piano_dali.jpeg" alt="the_surrealist_piano" /></a><span>Dal&#237;</span></li>
+				</ul>
 			</article>
 
-			<article id="position_three">
-			<!--
-			!-->
+			<article class="info_box" id="video">
+				<ul>
+					<li><a href='javascript:void(0)' onclick='showLightbox("letoile_de_mer")'><img src="gallery/thumbs/letoile_de_mer_ray.png" alt="letoile_de_mer" /></a><span>Ray</span></li>
+
+					<li><a href='javascript:void(0)' onclick='showLightbox("lage_dor")'><img src="gallery/thumbs/lage_dor_bunuel.jpeg" alt="lage_dor" /></a><span>Bunuel</span></li>
+
+					<li><a href='javascript:void(0)' onclick='showLightbox("le_sang_dun_poete")'><img src="gallery/thumbs/le_sang_dun_poete_cocteau.png" alt="le_sang_dun_poete" /></a><span>Cocteau</span></li>
+				</ul>
 			</article>
 			
+			<!-- lightboxes !-->
+			<div class='lightbox' id='manifesto_of_surrealism-lightbox'>
+				<img src="gallery/paintings/manifesto_of_surrealism_breton.jpg" alt="Manifesto of Surrealism, Breton" /><h2>Manifesto of Surrealism, Breton</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='nude_descending_staircase-lightbox'>
+				<img src="gallery/paintings/nude_descending_staircase_2_duchamp.jpg" alt="nude_descending_staircase" /><h2>Nude Descending a Staircase, Duchamp</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='treachery_of_images-lightbox'>
+				<img src="gallery/paintings/treachery_of_images_magritte.jpg" alt="treachery_of_images" /><h2>Treachery of Images, Magritte</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='triumph_of_surrealism-lightbox'>
+				<img src="gallery/paintings/triumph_of_surrealism_ernst.jpg" alt="triumph_of_surrealism" /><h2>Triumph of Surrealism, Ernst</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='convulsive_beauty-lightbox'>
+				<img src="gallery/drawings/convulsive_beauty_ray.gif" alt="convulsive_beauty" /><h2>Convulsive Beauty, Ray</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='triumph_of_surrealism-lightbox'>
+				<img src="gallery/paintings/triumph_of_surrealism_ernst.jpg" alt="triumph_of_surrealism" /><h2>Triumph of Surrealism, Ernst</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='stalker-lightbox'>
+				<img src="gallery/drawings/stalker_lukshina.jpg" alt="stalker" /><h2>Stalker, Lukshina</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='the_surrealist_piano-lightbox'>
+				<img src="gallery/drawings/the_surrealist_piano_dali.jpeg" alt="the_surrealist_piano" /><h2>The Surrealist Piano, Dal&#237;</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='letoile_de_mer-lightbox'>
+				<iframe width="420" height="315" src="http://www.youtube.com/embed/V7PQvkYYikU" frameborder="0"></iframe><h2>L'Etoile de Mer, Ray</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='lage_dor-lightbox'>
+				<iframe width="420" height="315" src="http://www.youtube.com/embed/SpZCMmPW_18" frameborder="0"></iframe><h2>L'Age D'Or, Bunuel</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
+			<div class='lightbox' id='le_sang_dun_poete-lightbox'>
+				<iframe width="420" height="315" src="http://www.youtube.com/embed/BAqxEq4ylb4" frameborder="0"></iframe><h2>Le sang d'un po&#232;te, Cocteau</h2><p class='close-btn'><a href='javascript:void(0)' onclick='closeLightbox()'>close</a></p>
+			</div>
+
 			<article id="footer">
 				Ceci n'est pas une site.
 			</article>

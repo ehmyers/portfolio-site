@@ -2,13 +2,15 @@
 <head>
 <title>surrealism - about</title>
 <link rel="stylesheet" href="externals/surrealist_styles.css" />
+<link rel="icon" type="image/ico" href="images/favicons/favicon07.ico" />
+<script type="text/javascript" src="externals/jquery.js"></script>
 <script type="text/javascript" src="externals/random.js"></script>
 </head>
 
 <body>
 <section class="container">
 <section class="inner_container">
-<section class="window_above">
+<section class="window">
 
 <section id="experiment">
 		<div id="background"></div>
@@ -18,8 +20,8 @@
 		<header>
 			<nav>
 				<ul>
-					<li><a href="surrealist.html">home</a></li>
-					<li><a href="about.html" id="active">about</a></li>
+					<li><a href="index.html">home</a></li>
+					<li><a href="about.html" class="active">about</a></li>
 					<li><a href="artists.html">artists</a></li>
 					<li><a href="work.html">work</a></li>
 					<li><a href="http://www.moma.org/" target="_blank" />moma</a></li>
@@ -27,15 +29,15 @@
 			</nav>
 			<nav class="small_menu" id="another_text_rotate">
 				<ul>
-					<li><a href="#" id="active">philosophy</a></li>
-					<li><a href="#">movement spreading</a></li>
-					<li><a href="#">manifestos</a></li>
+					<li><a href="#" class="active" menu-item="philosophy">philosophy</a></li>
+					<li><a href="#" menu-item="movement_spreading">movement spreading</a></li>
+					<li><a href="#" menu-item="manifestos">manifestos</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<section class="content">
-			<article id="position_one">
+			<article class="active info_box position_one" id="philosophy">
 			Many Surrealist artists and writers regard their work as an expression of the philosophical movement first and foremost, with the works being an artifact.<br /><br />
 
 			Leader Andr&#233; Breton was explicit in his assertion that Surrealism was above all a revolutionary movement.  Surrealism is a cultural movement that began in the early 1920s, and is best known for its visual artworks and writings.<br /><br />
@@ -43,15 +45,14 @@
 			Surrealist works feature the element of surprise, unexpected juxtapositions and non sequitur.
 			</article>
 
-			<article id="position_two">
-			<!--From the 1920s onward, the movement spread around the globe, eventually affecting the visual arts, literature, film, and music of many countries and languages, as well as political thought and practice, philosophy, and social theory.<br /><br />
+			<article class="info_box position_two" id="movement_spreading">
+			From the 1920s onward, the movement spread around the globe, eventually affecting the visual arts, literature, film, and music of many countries and languages, as well as political thought and practice, philosophy, and social theory.<br /><br />
 
-			Surrealism developed out of the Dada activities during World War I and the most important center of the movement was Paris.!-->
+			Surrealism developed out of the Dada activities during World War I and the most important center of the movement was Paris.
 			</article>
 
-			<article id="position_three">
-			<!--The surrealist movement had two manifestos that embodied their thought process.  The first was published in 1924, and the second in 1929.  Both were written by French surrealist Andr&#233; Breton.  Presenting the surrealist manifestos of <a href="documents/first_manifesto.doc">1924</a> and <a href=""documents/second_manifesto.doc">1929</a>.
-			!-->
+			<article class="info_box position_three" id="manifestos">
+			The surrealist movement had two manifestos that embodied their thought process.  The first was published in 1924, and the second in 1929.  Both were written by French surrealist Andr&#233; Breton.  Presenting the surrealist manifestos of <a href="documents/first_manifesto.doc">1924</a> and <a href="documents/second_manifesto.doc">1929</a>.
 			</article>
 			
 			<article id="footer">
@@ -59,9 +60,6 @@
 			</article>
 		</section>
 
-		<!--<section id="random_image">
-			<img src="images/rotatable_bkds/surrealist_12.jpg" alt="" width="100%" />
-		</section>!-->
 		</section>
 	</section>
 	</section>

@@ -53,15 +53,67 @@ header {
 	-webkit-transform: rotate(-25deg);
 }
 
-/******************** window **********************/
-.window_above {
-	width: 900px;
-	height: 90%;
-	position: absolute;
-	overflow: hidden;
+/******************** art/light box *********************/
+
+.art_box {
+	padding: 0px;
+	overflow: auto;
+}
+
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background: rgba(0,0,0, 0.7);
+	padding-top: 100px;
+	padding-left: 150px;
+}
+
+.close-btn {
+	position: fixed;
+	top: 68px;
+	color: #fff;
+	font-size: 18px;
+}
+.close-btn a:link {
+	color: white;
+}
+
+.lightbox img {
+	height: 80%;
+}
+
+.lightbox h2 {
+	color: white;
+}
+
+li span {
+	position: relative;
+	left: -220px;
+	font-size: 12px;
 }
 
 /******************** content *********************/
+
+a.active:link {
+	color: #be5c1b;
+}
+
+a.active:visited {
+	color: #be5c1b;
+}
+
+a.active:hover {
+	color: #be5c1b;
+}
+
+a.active:active {
+	color: #be5c1b;
+}
+
 .content {
 	background: rgba(215, 215, 215, 0.5);
 	padding: 0px 30px 0px 30px;
@@ -71,10 +123,17 @@ header {
 	width: 100%;
 	top: 15%;
 	z-index: 5;
+	overflow: hidden;
+}
+
+.info_box {
+	display: none;
+	color: #222222;
+	padding: 5px;
 	overflow: auto;
 }
 
-#position_one {
+.position_one {
 	position: absolute;
 	left: 50%;
 	right: 10%;
@@ -82,7 +141,7 @@ header {
 	bottom: 10%;
 }
 
-#position_two {
+.position_two {
 	position: absolute;
 	left: 10%;
 	right: 50%;
@@ -90,15 +149,15 @@ header {
 	bottom: 10%;
 }
 
-#position_three {
+.position_three {
 	position: absolute;
-	left: 15%;
-	right: 40%;
-	top: 40%;
+	left: 5%;
+	right: 50%;
+	top: 25%;
 	bottom: 10%;
 }
 
-#position_four {
+.position_four {
 	position: absolute;
 	left: 30%;
 	right: 30%;
@@ -108,36 +167,30 @@ header {
 
 /******************** general *********************/
 
-#active {
-	color: #be5c1b;
-}
-
 body {
 	background-color: #b4956c;
-	font: 12px/18px helvetica, verdana, sans-serif;
+	font: 12px/18px "CenturyGothic", helvetica, arial, sans-serif;
 	margin: 0px;
 	padding: 0px;
 }
 
-div {
-	font: 15px "CenturyGothic";
-}
-
 @font-face {
-  font-family: LittleDays;
-  src: url(externals/Little days.ttf);
-}
+	font-family: LittleDays;
+ 	src: url("fonts/little_days.eot");
+ 	src: local('LittleDays'), url('fonts/little_days.svg') format('svg'), url('fonts/little_days.woff') format('woff'),  url('fonts/little_days.ttf') format('truetype');
+  }
 
 @font-face {
 	font-family: CenturyGothic;
-  src: url(externals/Century Gothic);
+  src: url("fonts/century_gothic.ttf");
+  src: local('CenturyGothic'), url('fonts/century_gothic.svg') format('svg'), url('fonts/century_gothic.woff') format('woff'),  url('fonts/century_gothic.ttf') format('truetype');
 }
 
 #footer {
 	position: absolute;
 	right: 7%;
 	bottom: 7%;
-	font: 40px LittleDays;
+	font: 40px "LittleDays";
 	text-align: right;
 }
 
@@ -149,20 +202,36 @@ h3 {
 	font: 20px "LittleDays";
 }
 
-img {
-	padding: 0px;
+li img {
+	padding: 20px;
 	margin: 0px;
+	max-height: 200px;
 }
 
 li {
 	list-style: none;
 	display: inline;
+	padding:0px;
+}
+
+header li {
+	padding:0px 40px 0px 10px;
+}
+
+.small_menu li {
 	padding:0px 40px 0px 10px;
 }
 
 ul {
 	padding: 0px;
 	margin: 3% 0% -10px 0%;
+}
+
+.window {
+	width: 900px;
+	height: 90%;
+	position: absolute;
+	overflow: hidden;
 }
 
 /******************** links *********************/
@@ -191,20 +260,20 @@ a:active {
 
 #background {
 	opacity: .8;
-	background: url("../images/rotatable_bkds/surrealist_07.jpg");
+	background: url("../images/rotatable_bkds/surrealist_10.jpg");
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
 	position: fixed;
 	-webkit-transition: left 2500s linear 0;
-	-moz-transition: left 2500s linear 0;
+	-moz-transition: left 2500s linear;
 	-o-transition: left 2500s linear 0;
 	transition: left 2500s linear 0;
 }
 
 #midground {
-	background: url("../images/rotatable_bkds/surrealist_07.jpg");
+	background: url("../images/rotatable_bkds/surrealist_10.jpg");
 	opacity: 0.5;
 	top: 0px;
 	left: 0px;
@@ -212,23 +281,23 @@ a:active {
 	bottom: 0px;
 	position: fixed;
 	-webkit-transition: left 2000s linear 0;
-	-moz-transition: left 2000s linear 0;
+	-moz-transition: left 2000s linear;
 	-o-transition: left 2000s linear 0;
 	transition: left 2000s linear 0;
 }
 
 #foreground {
 	opacity: 0.3;
-	background: url("../images/rotatable_bkds/surrealist_07.jpg");
+	background: url("../images/rotatable_bkds/surrealist_10b.jpg");
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
 	position: fixed;
-	-webkit-transition: left 1000s linear 0;
-	-moz-transition: left 1000s linear 0;
-	-o-transition: left 1000s linear 0;
-	transition: left 1000s linear 0;
+	-webkit-transition: left 1500s linear 0;
+	-moz-transition: left 1500s linear;
+	-o-transition: left 1500s linear 0;
+	transition: left 1500s linear 0;
 }
 
 #experiment:target #background {

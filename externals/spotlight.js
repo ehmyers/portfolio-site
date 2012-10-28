@@ -33,7 +33,7 @@ $(document).ready(function() {
 function showLightbox(id) {
 	var selector = '#' + id + '-lightbox';
 	console.log(selector);
-	$('.lighbox').hide();
+	$('.lightbox').hide();
 	$(selector).fadeIn();
 }
 

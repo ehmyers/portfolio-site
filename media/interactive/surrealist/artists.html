@@ -2,13 +2,15 @@
 <head>
 <title>surrealism - about</title>
 <link rel="stylesheet" href="externals/surrealist_styles.css" />
+<link rel="icon" type="image/ico" href="images/favicons/favicon03.ico" />
+<script type="text/javascript" src="externals/jquery.js"></script>
 <script type="text/javascript" src="externals/random.js"></script>
 </head>
 
 <body>
 <section class="container">
 <section class="inner_container">
-<section class="window_above">
+<section class="window">
 
 <section id="experiment">
 		<div id="background"></div>
@@ -18,49 +20,49 @@
 		<header>
 			<nav>
 				<ul>
-					<li><a href="surrealist.html">home</a></li>
+					<li><a href="index.html">home</a></li>
 					<li><a href="about.html">about</a></li>
-					<li><a href="artists.html" id="active">artists</a></li>
+					<li><a href="artists.html" class="active">artists</a></li>
 					<li><a href="work.html">work</a></li>
 					<li><a href="http://www.moma.org/" target="_blank" />moma</a></li>
 				</ul>
 			</nav>
 			<nav class="small_menu" id="text_rotate">
 				<ul>
-					<li><a href="#" id="active">dal&#237;</a></li>
-					<li><a href="#">breton</a></li>
-					<li><a href="#">magritte</a></li>
-					<li><a href="#">ernst</a></li>
+					<li><a href="#" class="active" menu-item="dali">dal&#237;</a></li>
+					<li><a href="#" menu-item="breton">breton</a></li>
+					<li><a href="#" menu-item="magritte">magritte</a></li>
+					<li><a href="#" menu-item="ernst">ernst</a></li>
 				</ul>
 			</nav>
 		</header>
 
-		<section class="active content">
-			<article id="position_two">
+		<section class="content">
+			<article class="active info_box position_two" id="dali">
 				<p><h3>Salvador Dal&#237;</h3>
 				May 11, 1904 &#8212; January 23, 1989<br /><br />
 				Dal&#237; was a prominent Spanish surrealist painter born in Figueres, Spain.  Dal&#237; was best known for the striking and bizarre images in his surrealist work.  Dal&#237;'s expansive artistic repertoire included film, sculpture, and photography, in collaboration with a range of artists in a variety of media.  <br /><br />Dal&#237; was highly imaginative, and also enjoyed indulging in unusual and grandiose behavior.  His eccentric manner and attention-grabbing public actions sometimes drew more attention than his artwork, to the dismay of those who held his work in high esteem, and to the irritation of his critics.
 			</p>
 
 			</article>
-			<!--<article id="position_one">
+			<article class="active info_box position_one" id="breton">
 				<p><h3>Andr&#233; Breton</h3>
 				February 19 1896 &#8212; September 28 1966<br /><br />
-				Breton was a French writer and poet. He is known best as the founder of Surrealism. His writings include the first Surrealist Manifesto (Manifeste du surréalisme) of 1924, in which he defined surrealism as "pure psychic automatism".<br /><br />
-				In 1919 Breton initiated the review Littérature with Louis Aragon and Philippe Soupault.  He also associated with Dadaist Tristan Tzara.  In 1924 he was instrumental in the founding of the Bureau of Surrealist Research.  In a publication The Magnetic Fields (Les Champs Magnétiques), a collaboration with Soupault, he implemented the principle of automatic writing.</p>
+				Breton was a French writer and poet. He is known best as the founder of Surrealism. His writings include the first Surrealist Manifesto (Manifeste du surr&#233;alisme) of 1924, in which he defined surrealism as "pure psychic automatism".<br /><br />
+				Created Lit&#233;rature with Louis Aragon and Philippe Soupault.  He also associated with Dadaist Tristan Tzara.  In 1924 he was instrumental in the founding of the Bureau of Surrealist Research.  In a publication The Magnetic Fields (Les Champs Magn&#233;tiques), a collaboration with Soupault, he implemented the principle of automatic writing.</p>
 			</article>
-			<article id="position_four">
+			<article class="active info_box position_four" id="magritte">
 				<p><h3>Ren&#233; Magritte</h3>
-					November 21 1898 – August 15 1967<br /><br />
+					November 21 1898 &#8212; August 15 1967<br /><br />
 					Magritte was a Belgian surrealist artist.  He became well known for a number of witty and thought-provoking images that fell under the umbrella of surrealism.  His work challenges observers' preconditioned perceptions of reality.  Magritte's work frequently displays a collection of ordinary objects in an unusual context, giving new meanings to familiar things.<br /><br />
-					The use of objects as other than what they seem is typified in his painting, The Treachery of Images, which shows a pipe that looks as though it is a model for a tobacco store advertisement.  Magritte painted below the pipe "Ceci n'est pas une pipe" ("This is not a pipe"), which seems a contradiction, but is actually true: the painting is not a pipe, it is an image of a pipe.  It does not "satisfy emotionally"—when Magritte once was asked about this image, he replied that of course it was not a pipe, just try to fill it with tobacco.</p>
+					The use of objects as other than what they seem is typified in his painting, The Treachery of Images, which shows a pipe that looks as though it is a model for a tobacco store advertisement.  Magritte painted below the pipe "Ceci n'est pas une pipe" ("This is not a pipe"), which seems a contradiction, but is actually true: the painting is not a pipe, it is an image of a pipe.  It does not "satisfy emotionally" &#8212; when Magritte once was asked about this image, he replied that of course it was not a pipe, just try to fill it with tobacco.</p>
 			</article>
-			<article id="position_three">
+			<article class="active info_box position_three" id="ernst">
 				<p><h3>Max Ernst</h3>
-					April 2 1891 – April 1 1976<br /><br />
+					April 2 1891 &#8212; April 1 1976<br /><br />
 					Ernst was a German painter, sculptor, graphic artist, and poet. A prolific artist, Ernst was one of the primary pioneers of the Dada movement and Surrealism.  Ernst developed a fascination with birds that was prevalent in his work.<br /><br />
 					His alter ego in paintings, which he called Loplop, was a bird.  He suggested that this alter-ego was an extension of himself stemming from an early confusion of birds and humans.  He said that one night when he was young he woke up and found that his beloved bird had died, and a few minutes later his father announced that his sister was born.  Loplop often appeared in collages of other artists' work, such as Loplop presents Andr&#233; Breton.</p>
-			</article>!-->
+			</article>
 
 			<article id="footer">
 				Ceci n'est pas une site.

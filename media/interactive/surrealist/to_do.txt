@@ -1,0 +1,9 @@
+get scrolling working when gallery is too big
+
+upload to my site and the server by thursday
+
+make scrolling work in all browsers
+
+make font embedding work in all browsers
+
+update on personal portfolio site
