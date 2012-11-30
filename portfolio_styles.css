@@ -76,6 +76,7 @@ nav ul li {
 .side_menu.active {
 	position: absolute;
 	display: block;
+	overflow-y: auto;
 	top: 0px;
 	left: 0px;
 	bottom: 0px;

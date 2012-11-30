@@ -6,6 +6,7 @@ $(document).ready(function() {
 	});
 
 	$("nav li").click(function() { // on click, change active menu
+		//$("this").color(#ffffff);
 		$(".spotlight").children().hide();
 		$("#launchpad").fadeOut();
 		$(".spotlight").fadeIn();
