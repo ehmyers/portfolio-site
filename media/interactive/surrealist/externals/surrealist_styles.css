@@ -72,9 +72,14 @@ header {
 	padding-left: 150px;
 }
 
+.inner_lightbox {
+	position: absolute;
+	z-index: 20;
+}
+
 .close-btn {
 	position: fixed;
-	top: 68px;
+	top: 65px;
 	color: #fff;
 	font-size: 18px;
 }
@@ -192,6 +197,10 @@ body {
 	bottom: 7%;
 	font: 40px "LittleDays";
 	text-align: right;
+}
+
+h1 {
+	font: 15px "CenturyGothic";
 }
 
 h2 {

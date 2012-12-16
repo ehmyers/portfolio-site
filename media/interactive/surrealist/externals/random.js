@@ -10,17 +10,26 @@ $(document).ready(function(){
 		console.log("active content " + active_content);
 		$(".info_box").hide();
 		$("#" + active_content).show();
-		//$(".info_box").css("display", "block");
 	});
 
 	swap_background();
 	changing_active_menu();
 
-	$(".small_menu li:first-child a").click()
+	// when lightbox is up, and click anywhere, close.
+	// also, escape key functionality
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) { // esc keycode
+      closeLightbox();
+		}
+		if (showLightbox) {
+			closeLightbox();
+		}
+	});
+
+	$(".small_menu li:first-child a").click();
 });
 
 /* function time! */
-
 function swap_background(){
 	// changing the background image on click
 	var randomnumber = Math.ceil(Math.random()*10);
@@ -47,16 +56,12 @@ function changing_active_menu(){
 function showLightbox(id) {
 	var selector = '#' + id + '-lightbox';
 	console.log(selector);
-	$('.lighbox').hide();
+	$('.lightbox').hide();
 	$(selector).fadeIn();
+	return true;
 }
 
 function closeLightbox() {
 	$('.lightbox').fadeOut();
+	$('.lightbox').player.stopVideo();
 }
-
-//function swap_favicon(){
-	// swapping favicons
-	//	var secondrandom = Math.ceil(Math.random()*8);
-	//	var url = "url('images/favicons/favicon" + secondrandom + ".ico");
-//}

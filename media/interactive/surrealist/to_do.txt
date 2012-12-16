@@ -1,9 +1,5 @@
-get scrolling working when gallery is too big
+close lightbox on click anywhere on screen
 
-upload to my site and the server by thursday
+stop audio/video on closing lightbox
 
-make scrolling work in all browsers
-
-make font embedding work in all browsers
-
-update on personal portfolio site
+videos and lightbox behind menu
