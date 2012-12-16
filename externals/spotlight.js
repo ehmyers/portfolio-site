@@ -5,20 +5,23 @@ $(document).ready(function() {
 		spotlightShow(id);
 	});
 
-	$("nav li").click(function() { // on click, change active menu
-		//$("this").color(#ffffff);
+	// on click, change active menu
+	$("nav li").click(function() {
 		$(".spotlight").children().hide();
 		$("#launchpad").fadeOut();
 		$(".spotlight").fadeIn();
 		
-		var active_menu = $(this).children("a").attr("data-menuid"); // swaps out menus
+		// swaps out menus
+		var active_menu = $(this).children("a").attr("data-menuid");
 		$(".side_menu").hide();
 		$(active_menu).fadeIn();
 
-		var first_item = $(active_menu + " ul").children(":first-child");
+		// displays the first item in the clicked section
+		var first_item = $(active_menu + " ul").children(":first-child"); 
 		first_item.find("img").click();
 	});
 
+	// when an image in the launchpad is clicked...
 	$("#launchpad img").click(function() {
 		var content = $(this).parent().attr("data-content");
 		var sidemenu = $("#" + content).attr("data-menu");
@@ -28,6 +31,13 @@ $(document).ready(function() {
 		$(".spotlight").fadeIn();
 		spotlightShow(content);
 	});
+
+	// fades everything out and the launchpad back in
+	$("#logo img").click(function() {
+		$(".spotlight").fadeOut();
+		$(".side_menu").hide();
+		$("#launchpad").fadeIn();
+});
 
 });
 
