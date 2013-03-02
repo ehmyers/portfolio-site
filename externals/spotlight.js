@@ -39,8 +39,6 @@ $(document).ready(function() {
 		$("#launchpad").fadeIn();
 	});
 
-	swffit.fit('size', 840, 520, 599, 371, false, true);
-
 });
 
 function showLightbox(id) {
