@@ -37,7 +37,7 @@ $(document).ready(function() {
 		$(".spotlight").fadeOut();
 		$(".side_menu").hide();
 		$("#launchpad").fadeIn();
-	});
+});
 
 });
 
